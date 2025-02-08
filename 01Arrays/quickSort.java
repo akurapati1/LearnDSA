@@ -10,11 +10,11 @@ public class quickSort {
 
     static int partition(int arr[], int low, int high) {
 
-        int pivot = arr[low+1];
-        int left = low;
+        int pivot = low;
+        int left = low+1;
         int right = high;
 
-        while(left < right){
+        while(left <= right){
             while( left <= high && arr[left] <= arr[pivot]){
 
                 left ++;

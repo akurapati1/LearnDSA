@@ -9,20 +9,19 @@ class BinarySearch {
     
     public int search(int[] arr, int lb, int ub, int k){
         
-        if(lb == ub && arr[lb] ==k) return lb;
+        if(lb > ub) return -1;
         
-        if(lb < ub){
-            int mid = (lb+ub)/2;
-            if(arr[mid] < k){
-                return search(arr, mid+1, ub, k);
-            } 
-            else if(arr[mid] > k) {
-                return search(arr, lb, mid-1, k);
-            }
-            else return mid;
-        }
+        int mid = lb +(ub - lb)/2;
         
-        return -1;
+        if(arr[mid] == k){
+            
+            if(mid ==0 || arr[mid-1] !=k) return mid;
+            else return search(arr, lb, mid, k);
+        } 
+        
+        else if(arr[mid]> k) return search(arr, lb, mid-1, k);
+        
+        else return search(arr, mid+1, ub, k);
         
         
     }

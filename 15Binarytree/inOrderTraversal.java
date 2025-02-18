@@ -9,7 +9,7 @@ class Node {
     }
 }
 
-class Solution {
+class inOrderTraversal {
     // Function to return a list containing the inorder traversal of the tree.
     ArrayList<Integer> inOrder(Node root) {
         
@@ -32,4 +32,4 @@ class Solution {
                 
     }
     
-    
+}

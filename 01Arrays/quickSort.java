@@ -1,9 +1,9 @@
 public class quickSort {
-    static void quickSort(int arr[], int low, int high) {
+    static void quick(int arr[], int low, int high) {
         if(low<high){
             int mid = partition(arr, low, high);
-            quickSort(arr, low, mid-1);
-            quickSort(arr, mid+1, high);
+            quick(arr, low, mid-1);
+            quick(arr, mid+1, high);
         }
         
     }

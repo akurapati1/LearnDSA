@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.PriorityQueue;
 
 public class maxSumSubSequence {
     public int[] maxSubsequence(int[] nums, int k) {

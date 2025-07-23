@@ -1,24 +1,21 @@
-public class SecondLargest {
-    public int getSecondLargest(int[] arr) {
-        
-        int large = Integer.MIN_VALUE;
-        int second_large = large;
-        
-        for(int i=0; i<arr.length; i++){
-            
-            if(arr[i]>large){
-                second_large = large;
-                large = arr[i];
-                continue;
+public class secondLargest {
+
+    public static int secondLarge(int[] arr){
+
+        int first = Integer.MIN_VALUE;
+        int second = Integer.MIN_VALUE;
+
+        for(int n: arr){
+            if(n > first){
+                second = first;
+                first = n;
             }
-            if(arr[i]>second_large && arr[i]<large){
-                second_large = arr[i];
+
+            if(n > second && n != first){
+                second = n;
             }
-            
         }
-        if(second_large == Integer.MIN_VALUE) return -1;
-        return second_large;
-        
+        return second;
     }
     
 }
